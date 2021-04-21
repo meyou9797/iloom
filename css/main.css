@@ -12,61 +12,56 @@
     width:100%;
     display:block;
 }
-
-
-.sliderBtn{
+/*슬릭 arrow*/
+.prevBtn,.nextBtn{
+    background:url(../images/sliderLbtn.png)no-repeat;
+    width:38px;
+    height: 74px;
+    position:absolute;
+    top:50%;
+    margin-top:-37px;
     text-indent:-9999px;
+    z-index:1;
 }
-.sliderBtn li{float:left;}
-.sliderBtn li a{
+.nextBtn{
+    background-image: url(../images/sliderRbtn.png);
+    right: 0;
+}
+.prevBtn a,.nextBtn a{
     display:block;
     height: 100%;
 }
-
-
-.testBm{
-    
+/*슬릭 dots*/
+.slick-slider button{
+    outline: none;
+    border: none;
 }
-.sliderNb{
+.slick-dots{
+    text-align: center;
+    width:100%;
+    overflow: hidden;
     position:absolute;
-    bottom:20px;
-    left:50%;
-    margin-left:-90px;
-    
+    bottom:0;
 }
-.sliderNb li{
+.slick-dots li{
+    display:inline-block
+}
+.slick-slider{
+    position: relative;
+}
+.slick-dots button{
     width:35px;
     height: 3px;
-    margin-right:10px;
-    background:url(../images/sliderNb1.png)no-repeat;    
+    background:url(../images/sliderNb1.png)no-repeat;
+    text-indent: -9999px;
+    margin-right: 5px;
+    cursor:pointer;
 }
-.sliderNb li:last-child{
+.slick-active button{
     background:url(../images/sliderNb2.png)no-repeat;
+    width:35px;
+    height: 3px;
 }
-.sliderNb li a{
-}
-
-.arrowBtn li{
-    width: 30px;
-    height: 55px;
-    background:url(../images/sliderLbtn.png)no-repeat;
-}
-.arrowBtn li a{}
-.arrowLBtn{
-    position:absolute;
-    top:50%;
-    margin-top:-27px;
-    left:10px;
-}
-.mainSlider .arrowRBtn{
-    background-image:url(../images/sliderRbtn.png);
-    position:absolute;
-    top:50%;
-    margin-top:-27px;
-    right:10px;
-}
-
-
 /*mainCon01*/
 .mainCon01{
     text-align: center;
@@ -258,12 +253,12 @@
 .csTxt{padding:5px;}
 .csIcon{
     display:flex;
-    width:90%;
+    width:100%;
     margin:0 auto;
     text-align: center;
 }
 .csIcon li{    
-    margin:0 2px;
+    margin:0 5px;
     height: 50px;
     line-height:38px;
     width:100%;
@@ -278,12 +273,13 @@
 }
 .csIcon li img{
     float:left;
-    width:30%;
+    width:32%;
     margin-top:5px;
+    margin-left:3px;
 }
 .csIcon li h4{
     margin-top:5px;
-    font-size:10px;
+    font-size:11px;
 }
 .csIcon li span{
     font-size:12px;
